@@ -1,0 +1,61 @@
+.breadcrumb {
+  text-align: left;
+  margin-bottom: 10px;
+}
+.breadcrumb a {
+  float: left;
+  color: white;
+  background: darkcyan;
+  text-decoration: none;
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin-right: 13px;
+  padding: 0 5px;
+}
+.breadcrumb a:hover{
+color: darkblue;
+font-weight: bold;
+text-decoration: underline;
+}
+
+.breadcrumb >li{
+  display: inline;
+}
+.breadcrumb li.location+li.location::before{
+  content: "";
+}
+.breadcrumb .location a::before,
+.breadcrumb .location a::after {
+  content: "";
+  position: absolute;
+  border-color: darkcyan;
+  border-style: solid;
+  border-width: 15px 5px;
+}
+.breadcrumb .location a::before {
+  left: -8px;
+  border-left-color: transparent;
+}
+.breadcrumb .location a::after {
+  left: 100%;
+  border-color: transparent;
+  border-left-color: darkcyan;
+}
+.breadcrumb li.attribute::after{
+content:"*";
+vertical-align: super;
+}
+.breadcrumb .attribute a:hover{
+color: blue;
+font-size: 20px;
+text-decoration: none;
+}
+
+.breadcrumb .attribute a {
+  background-color: inherit;
+}
+.attribute a{
+  color: green;
+}
